@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+//#include <string.h>
 int main(){ 
 
     //criação das variáveis
@@ -9,38 +9,46 @@ int main(){
     
     //solicitando as características da primeira cidade
     printf("Qual o nome da primeira cidade\n");
-        //scanf(" %s", cidade1);
-        fgets(cidade1,50,stdin);
-            cidade1[strcspn(cidade1,"\n")]=0;
+        scanf(" %[^\n]", cidade1); //" %[^\n]" usado para que o scanf leia espaço entre o nome da cidade, Ex: "São Paulo"
+
     printf("Qual o estado da cidade?\n");
         scanf(" %s", estado1);
+
     printf("Qual o código da cidade?\n");
         scanf(" %s", codigo1);
+
     printf("Qual a população da cidade?\n");
         scanf(" %d",&populacao1);
+
     printf("Qual a Área da cidade?\n");
         scanf(" %f",&area1);
+
     printf("Qual o PIB da cidade?\n");
         scanf(" %f",&pib1);
+
     printf("Quantos pontos tuísticos a sua cidade?\n");
         scanf(" %d",&p_turistico1);
 
     //solicitando as características da segunda cidade    
     
     printf("Qual o nome da segunda cidade\n");
-        //scanf(" %s",cidade2);
-        fgets(cidade2,50,stdin);
-         cidade2[strcspn(cidade2,"\n")]=0;
+        scanf(" %[^\n]",cidade2);
+
     printf("Qual o estado da cidade?\n");
         scanf(" %s",estado2);
+
     printf("Qual o código da cidade?\n");
         scanf(" %s",codigo2);
+
     printf("Qual a população da cidade?\n");
         scanf(" %d",&populacao2);
+
     printf("Qual a Área da cidade?\n");
         scanf(" %f",&area2);
+
     printf("Qual o PIB da cidade?\n");
         scanf(" %f",&pib2);
+
     printf("Quantos pontos tuísticos a sua cidade?\n");
         scanf(" %d",&p_turistico2);
         
@@ -58,7 +66,7 @@ int main(){
     printf("------------------------------------\n");
     
     //apresentando dados cidade02
-    /*
+    
     printf("-------------------------------------\n");
     printf("Informações segunda cidade\n");
     printf("Nome da cidade:%s\n", cidade2);
@@ -69,6 +77,6 @@ int main(){
     printf("PIB da cidade:%.2f\n", pib2);
     printf("Número de pontos turisticos da cidade:%d\n", p_turistico2);
     printf("------------------------------------");
-    */
+    
     return(0);
     } 
